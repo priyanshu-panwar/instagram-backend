@@ -60,12 +60,12 @@ async def create_user(db: Session, user: UserCreate):
         email=user.email.lower().strip(),
         username=user.username.lower().strip(),
         hashed_password=bcrypt_context.hash(user.password),
-        dob=user.dob or None,
-        gender=user.gender or None,
-        bio=user.bio or None,
-        location=user.location or None,
-        profile_pic=user.profile_pic or None,
-        name=user.name or None,
+        # dob=user.dob or None,
+        # gender=user.gender or None,
+        # bio=user.bio or None,
+        # location=user.location or None,
+        # profile_pic=user.profile_pic or None,
+        # name=user.name or None,
     )
     db.add(db_user)
     db.commit()
